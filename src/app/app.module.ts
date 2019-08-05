@@ -16,6 +16,7 @@ import { EditproductComponent } from './productdisplay/editproduct/editproduct.c
 import { TaskdisplayComponent } from './taskdisplay/taskdisplay.component';
 import { AddtaskComponent } from './taskdisplay/addtask/addtask.component';
 import { EdittaskComponent } from './taskdisplay/edittask/edittask.component';
+import { TasksidebarComponent } from './taskdisplay/tasksidebar/tasksidebar.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { EdittaskComponent } from './taskdisplay/edittask/edittask.component';
     EditproductComponent,
     TaskdisplayComponent,
     AddtaskComponent,
-    EdittaskComponent
+    EdittaskComponent,
+    TasksidebarComponent
   ],
   imports: [
     BrowserModule,

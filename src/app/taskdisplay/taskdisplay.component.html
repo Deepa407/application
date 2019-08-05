@@ -1,4 +1,14 @@
-<table class="table" >
+<div class="container-fluid">
+    <div class="col-md-3">
+      <app-sidebar [categoryName]="name" (shivu)="onSideBarClick($event)"></app-sidebar>
+    </div>
+ 
+  
+  <div class="col-md-9">
+
+    <div class="row">
+  
+    <table class="table" >
     <thead>
       <th>Id</th>
       <th>Title</th>
@@ -16,3 +26,7 @@
       </tr>
     </tbody>
     </table>
+    </div>
+    </div>
+    </div>
+    

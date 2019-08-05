@@ -21,4 +21,6 @@ export class SidebarComponent implements OnInit {
     this.shivu.emit(searchTerm);
   }
 
+  
+
 }
