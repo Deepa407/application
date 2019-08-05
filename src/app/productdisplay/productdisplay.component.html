@@ -16,8 +16,10 @@
             <p>{{item.pro_mfg}}</p>
             <p>{{item.pro_price | currency:'INR' }}</p>
             <p>
+
               <a (click)="onProductDelete(item)" class="btn btn-primary" role="button">Delete</a>
               <a (click)="onProductEdit(item)" class="btn btn-primary" role="button">Edit</a>
+              
             </p>
           </div>
         </div>
