@@ -1,0 +1,19 @@
+<h1>Reactive form Demo</h1>
+<div class="container">
+  <form [formGroup]="customer" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>First name</label>
+      <input formControlName="firstname" type="text" placeholder="Enter First name" class="form-control">
+      <label class="alert alert-danger" *ngIf="customer.get('firstname').hasError('required')" >First Name is Required</label>
+      <label class="alert alert-danger" *ngIf="customer.get('firstname').hasError('minlength')" >Name should be greater then 3</label>
+      <label class="alert alert-danger" *ngIf="customer.get('firstname').hasError('invalidName')" >First Name is invalid</label>
+    </div>
+    <div class="form-group">
+        <label>last name</label>
+        <input formControlName="lastname" type="text" placeholder="Enter Last Name" class="form-control" >
+      </div>
+      <div class="form-group" >
+          <button type="submit" class="form-control  btn btn-primary">Save</button>
+      </div>
+  </form>
+</div>

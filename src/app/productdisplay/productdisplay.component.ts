@@ -1,11 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { Product } from "./product";
 import { ProductdataService } from "./productdata.service";
 import { Router } from "@angular/router";
 @Component({
   selector: "app-productdisplay",
   templateUrl: "./productdisplay.component.html",
-  styleUrls: ["./productdisplay.component.css"]
+  styleUrls: ["./productdisplay.component.css"],
+  encapsulation:ViewEncapsulation.None
 })
 export class ProductdisplayComponent implements OnInit {
   arr: Product[] = [];

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from "@angular/forms";
+import { FormsModule ,ReactiveFormsModule} from "@angular/forms";
 import { AppComponent } from './app.component';
 import { ProductdisplayComponent } from './productdisplay/productdisplay.component';
 import { MenuComponent } from './menu/menu.component';
@@ -17,6 +17,7 @@ import { TaskdisplayComponent } from './taskdisplay/taskdisplay.component';
 import { AddtaskComponent } from './taskdisplay/addtask/addtask.component';
 import { EdittaskComponent } from './taskdisplay/edittask/edittask.component';
 import { TasksidebarComponent } from './taskdisplay/tasksidebar/tasksidebar.component';
+import { CustomerComponent } from './customer/customer.component';
 
 
 @NgModule({
@@ -33,14 +34,16 @@ import { TasksidebarComponent } from './taskdisplay/tasksidebar/tasksidebar.comp
     TaskdisplayComponent,
     AddtaskComponent,
     EdittaskComponent,
-    TasksidebarComponent
+    TasksidebarComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     routing,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,11 @@
 <div class="container">
   <div class="col-md-3">
+
     <app-sidebar [categoryName]="name" (shivu)="onSideBarClick($event)"></app-sidebar>
 
   </div>
   <div class="col-md-9">
-
+      <h1>product display</h1>
     <div class="row">
       <div class="col-sm-6 col-md-4" *ngFor="let item of arr">
         <div class="thumbnail">
@@ -19,7 +20,7 @@
 
               <a (click)="onProductDelete(item)" class="btn btn-primary" role="button">Delete</a>
               <a (click)="onProductEdit(item)" class="btn btn-primary" role="button">Edit</a>
-              
+
             </p>
           </div>
         </div>

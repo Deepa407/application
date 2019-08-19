@@ -8,6 +8,8 @@ import { EditproductComponent } from './productdisplay/editproduct/editproduct.c
 import { TaskdisplayComponent } from './taskdisplay/taskdisplay.component';
 import { AddtaskComponent } from './taskdisplay/addtask/addtask.component';
 import { EdittaskComponent } from './taskdisplay/edittask/edittask.component';
+import { CustomerComponent } from './customer/customer.component';
+
 
 const arr:Routes=[
    {path:'',component:ProductdisplayComponent},
@@ -17,10 +19,12 @@ const arr:Routes=[
    {path:'userdisplay',component:UserdisplayComponent},
    {path:'edituser/:user_email',component:EdituserComponent},
    {path:'signup',component:SignupComponent},
-   
+
    {path:'taskdisplay',component:TaskdisplayComponent},
    {path:'addtask',component:AddtaskComponent},
-   {path:'edittask/:Id',component:EdittaskComponent}
+   {path:'edittask/:Id',component:EdittaskComponent},
+
+   {path:'customer',component:CustomerComponent}
 ];
 
 export const routing=RouterModule.forRoot(arr);
