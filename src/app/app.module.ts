@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule ,ReactiveFormsModule} from "@angular/forms";
 import { AppComponent } from './app.component';
@@ -18,6 +18,15 @@ import { AddtaskComponent } from './taskdisplay/addtask/addtask.component';
 import { EdittaskComponent } from './taskdisplay/edittask/edittask.component';
 import { TasksidebarComponent } from './taskdisplay/tasksidebar/tasksidebar.component';
 import { CustomerComponent } from './customer/customer.component';
+import { SignupReactiveDemoComponent } from './userdisplay/signup-reactive-demo/signup-reactive-demo.component';
+import { EdiuserreactiveComponent } from './userdisplay/ediuserreactive/ediuserreactive.component';
+import { LoginComponent } from './login/login.component';
+import { DemoComponent } from './demo/demo.component';
+import { Demo1Component } from './demo1/demo1.component';
+import { Demo2Component } from './demo2/demo2.component';
+import { Interceptordemo } from './interceptordemo';
+import { Product1Component } from './product1/product1.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -35,7 +44,15 @@ import { CustomerComponent } from './customer/customer.component';
     AddtaskComponent,
     EdittaskComponent,
     TasksidebarComponent,
-    CustomerComponent
+    CustomerComponent,
+    SignupReactiveDemoComponent,
+    EdiuserreactiveComponent,
+    LoginComponent,
+    DemoComponent,
+    Demo1Component,
+    Demo2Component,
+    Product1Component,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +62,9 @@ import { CustomerComponent } from './customer/customer.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:Interceptordemo,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

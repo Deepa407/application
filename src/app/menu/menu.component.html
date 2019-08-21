@@ -21,6 +21,12 @@
           <li><a routerLinkActive="active" routerLink="/taskdisplay">Task</a></li>
           <li><a routerLinkActive="active" routerLink="/addtask">Add Task</a></li>
           <li routerLinkActive="active"><a  routerLink="/customer">Customer</a></li>
+          <li routerLinkActive="active"><a  routerLink="/signup2">SignupReactiveDemo</a></li>
+          <li routerLinkActive="active"><a  routerLink="/demo">Demo</a></li>
+          <li routerLinkActive="active"><a  routerLink="/user1">User1</a></li>
+          <li routerLinkActive="active"><a  routerLink="/product1">product1</a></li>
+          <li  *ngIf="!isLoggedIn()" routerLinkActive="active"><a routerLink="/login">Login</a></li>
+          <li *ngIf="isLoggedIn()" routerLinkActive="active"><a (click)="onLogOut()">LogOut</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
